@@ -1,10 +1,11 @@
 body {
     margin: 0;
-    background-color: #eee;
+    // background-color: #eee;
     // height: 100svh;
     // overflow:hidden;
 }
 .main {
+    // overflow: auto;
     margin: 0;
     // width: 100%;
     position: relative;
@@ -157,7 +158,6 @@ body {
 
 }
 .mainContent {
-    // overflow: scroll;
     background-color: #eee;
     grid-column: 2;
     grid-row: 2 / -1;
@@ -182,36 +182,47 @@ body {
         grid-template-rows: 1fr 1fr;
         gap:1rem;
         // padding: .5\\rem;
-        max-height: 90vh;
+        max-height: 150vh;
 
         & .rightItem {
             display: grid;
-            grid-template-rows: 1fr 10fr;
+            grid-template-rows: 30px 1fr;
             padding: 1rem;
-
             & .announcementsCards {
                 font-size: .9rem;
                 background-color: #ffffff;
                 border-radius: 1rem;
                 padding: 1rem;
                 display: grid;
-                grid-auto-rows: 100px;
+                grid-auto-rows: 1fr;
                 gap: 1rem;
                 & > :not(:last-child) {
                     border-bottom: 1px ridge #ccc;
                 }
                 & .announcement {
-                    padding: 1rem;
+                    padding: .8rem;                    
+                }
+            }
+            & .trendingCards {
+                font-size: .9rem;
+                background-color: #ffffff;
+                border-radius: 1rem;
+                padding: 1rem;
+                display: grid;
+                grid-auto-rows: 1fr;
+                gap: 1rem;
 
-                    
+                & .trendCard {
+                    // padding: .8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                 }
             }
 
         }
 
-        & h3 {
-            margin-bottom: 5px;
-        }
+        
 
     //     & div div{
         
@@ -249,7 +260,7 @@ h6, p, h5{
 }
 
 h3 {
-    margin: 0 0.5rem;
+    margin: 0;
 }
 
 .wIcon {
