@@ -6,7 +6,7 @@ const bottomSideBar = document.querySelector('.bottomSideBar');
 
 
 window.onresize = ()=> {
-    if (window.innerWidth > 750) {
+    if (window.innerWidth > 500) {
         sideBar.style.position = 'static';
         middleSideBar.style.display = 'grid';
         bottomSideBar.style.display = 'grid';
@@ -17,7 +17,7 @@ window.onresize = ()=> {
     }
 }
 LogoSideBar.onclick = () => {
-    if (window.innerWidth < 750 ) {
+    if (window.innerWidth < 500 ) {
     if (sideBar.style.position == 'absolute') {
         sideBar.style.position = 'static';
         middleSideBar.style.display = 'grid';
