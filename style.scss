@@ -20,46 +20,52 @@ body {
 
 
 .sideBar {
-    // padding: 30px;
     grid-column: 1;
     grid-row: 1 / -1;
     background-color: #0ea5e9;
     display: grid;
     grid-template-rows:subgrid;
     
-    &  div {
+    &  .sideBarContainer {
         display: grid;
-        gap:.5rem;
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         position: sticky;
-        top: 50px;
-        // position: fixed;
-        // justify-content: center;
-        // gap: .3rem;
+        top: 0px;
+        box-sizing: border-box;
         padding: .5rem;
-        // border:1px solid black;
-    }
-    & .middleSideBar * {
-        // align-self:self-start ;
-        // border: 2px solid black;
-    }
-    & .bottomSideBar {
-        // align-self: start;
-        // gap:15px;
-    }
+        height: 100svh;
 
-    & .logoSideBar {
-        // gap:0;
-        display: flex;
-        align-items: center;
-        // padding: 10px;
-
+        & .logoSideBar {
+            grid-column: 1 / 3;
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+        }
+        & .middleSideBar {
+            grid-column: 2;
+            display: grid;
+            grid-auto-rows: 30px;
+            justify-content: baseline;
+        }
+        & .bottomSideBar {
+            grid-column: 2;
+            display: grid;
+            justify-content: baseline;
+            grid-auto-rows: 30px;
+        }
     }
+        
     & .bottomSideBar *, .middleSideBar * {
         display: flex;
         gap: 1rem;
-        margin-top: -10px;
+        
+        &:hover {
+            color:blue;
+            opacity: 80%;
+            scale: 1.01;
+        }
     }
-
 }
 
 
@@ -168,7 +174,7 @@ body {
     & .mainContentCard {
         box-shadow: 2px 2px 6px #ccc;
         border-radius: 1rem;
-        border-left: 5px solid blueviolet;
+        border-left: 5px solid cyan;
         padding: 1rem;
         background-color: white;
     }
@@ -181,7 +187,6 @@ body {
         display: grid;
         grid-template-rows: 1fr 1fr;
         gap:1rem;
-        // padding: .5\\rem;
         max-height: 150vh;
 
         & .rightItem {
@@ -225,28 +230,6 @@ body {
         }
 
         
-
-    //     & div div{
-        
-    //         // background-color: blue;
-    //         // height: min(100%, 220px);
-    //         // width: 80%;
-    //         // gap: 3rem;
-    //         display: grid ;
-    //         grid-template-columns: 200px;
-    //         grid-template-rows: 100px;
-    //         justify-content: center;
-    //         align-items: center;
-    //         & div.announcement {
-    //             // background-color: #0ea5e9;
-    //             // border-radius: 8px;
-    //             &:not(:last-child) {
-    //                 border-bottom: 1px ridge #ddd;
-    //             }
-    //         }
-
-    //     }
-    // }
 
 }}
 
