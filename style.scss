@@ -1,45 +1,44 @@
 body {
     margin: 0;
-    height: 100svh;
+    // height: 100svh;
+    // overflow:hidden;
 }
 .main {
     position: relative;
     box-sizing: border-box;
     font-size: 1.1rem;
-    height: 100%;
+    // height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 4fr 1fr;
 }
 
 .sideBar {
-    // box-sizing: border-box;
-    // position: sticky;
-    // left: -200px;
-    // width: 20%;
     padding: 30px;
     grid-column: 1;
     grid-row: 1 / -1;
     background-color: #0ea5e9;
     display: grid;
-    grid-template-rows:subgrid;
-    // gap: 1.3rem;
+    grid-template-rows:1fr 1fr;
     
     &  div {
         display: grid;
         gap:0;
+        position: sticky;
+        top: 50px;
+        // position: fixed;
         // justify-content: center;
         // gap: .3rem;
         padding: .5rem;
         // border:1px solid black;
     }
     & .middleSideBar * {
-        align-self:self-start ;
+        // align-self:self-start ;
         // border: 2px solid black;
     }
     & .bottomSideBar {
         // align-self: start;
-        gap:15px;
+        // gap:15px;
     }
 
     & .logoSideBar {
@@ -62,8 +61,8 @@ body {
 .header {
     z-index: 2;
     background-color: #fff;
-    // position: sticky;
-    // top: -90px;
+    position: sticky;
+    top: -14%;
     grid-column: 2;
     grid-row: 1 / 2;
     box-shadow: 0 3px 4px 1px #ccc;
@@ -115,7 +114,7 @@ body {
             align-items: center;
             padding-left: 3rem;
             gap: 1rem;
-            padding: 1rem;
+            // padding: 1rem;
             padding-left: 3rem;
 
             & .userIcon {
@@ -129,9 +128,10 @@ body {
         }
         & .headerRightBottom {
             display: flex;
+            gap: 1rem;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
+            padding-right: 1rem;
         }
     }
 }
@@ -152,7 +152,7 @@ body {
 
 }
 .mainContent {
-    overflow: auto;
+    // overflow: scroll;
     background-color: #eee;
     grid-column: 2;
     grid-row: 2 / -1;
@@ -221,23 +221,23 @@ a {
     color:white;
 }
 
-@media (max-width: 500px) {
+// @media (max-width: 500px) {
 
-   .sideBar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0;
-    & .bottomSideBar {
-        display: none;
-    }
-    & .middleSideBar {
-        display: none;
-    }
+//    .sideBar {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     padding: 0;
+//     & .bottomSideBar {
+//         display: none;
+//     }
+//     & .middleSideBar {
+//         display: none;
+//     }
     
-}
+// }
 
-}
+// }
 //         grid-area: sideBar;
 //         order: 1;
 //         max-height: 15%;
