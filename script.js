@@ -1,34 +1,3 @@
-// const LogoSideBar = document.querySelector('.logoSideBar');
-// const sideBar = document.querySelector('.sideBar');
-// const middleSideBar = document.querySelector('.middleSideBar');
-// const bottomSideBar = document.querySelector('.bottomSideBar');
-
-
-
-// window.onresize = ()=> {
-//     if (window.innerWidth > 500) {
-//         sideBar.style.position = 'static';
-//         middleSideBar.style.display = 'grid';
-//         bottomSideBar.style.display = 'grid';
-//     } else {
-//         sideBar.style.position = 'absolute';
-//         middleSideBar.style.display = 'none';
-//         bottomSideBar.style.display = 'none';
-//     }
-// }
-// LogoSideBar.onclick = () => {
-//     if (window.innerWidth < 500 ) {
-//     if (sideBar.style.position == 'absolute') {
-//         sideBar.style.position = 'static';
-//         middleSideBar.style.display = 'grid';
-//         bottomSideBar.style.display = 'grid'
-//     } else {
-//         sideBar.style.position = 'absolute';
-//         middleSideBar.style.display = 'none';
-//         bottomSideBar.style.display = 'none';
-//         };   
-// }}
-
 const sideBar = document.querySelector('.sideBar');
 const showHideMenu = document.querySelector('.showHideSideBarOnMobile')
 
@@ -41,3 +10,22 @@ window.onresize =()=>{
     if (window.innerWidth < 500) sideBar.style.display = 'none';
 }
 
+
+const mainContentCards = document.querySelector('.mainContentCards');
+const templateContentCard = document.querySelector('.mainContentCardTemplate');
+const publishCard = document.querySelector('.publishIdea');
+const userProjectTitle = document.querySelector('.projectTitleInput');
+const userProjectText = document.querySelector('.UserProjectText');
+
+publishCard.addEventListener('click', ()=> {
+    const templateContentCardClone = templateContentCard.content.cloneNode(true);
+    const templateContentCardCloneHeader = templateContentCardClone.querySelector('.mainContentCardHeader');
+    const templateContentCardClonePara = templateContentCardClone.querySelector('.mainContentCardPara')
+    const templateContentCardCloneFavoriteBtn = templateContentCardClone.querySelector('.favoriteCard')
+    const templateContentCardCloneDelBtn = templateContentCardClone.querySelector('.deleteCard')
+    const templateContentCardCloneShareBtn = templateContentCardClone.querySelector('.shareCard')
+    const templateContentCardCloneBtns = templateContentCardClone.querySelector('.mainContentCardBtns');
+    templateContentCardCloneHeader.textContent = userProjectTitle.value;
+    templateContentCardClonePara.textContent = userProjectText.value;
+    mainContentCards.appendChild(templateContentCardClone);
+})
