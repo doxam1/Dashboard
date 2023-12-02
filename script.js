@@ -29,3 +29,15 @@
 //         };   
 // }}
 
+const sideBar = document.querySelector('.sideBar');
+const showHideMenu = document.querySelector('.showHideSideBarOnMobile')
+
+showHideMenu.onclick = () => {
+    if (sideBar.style.display == 'none') {sideBar.style.display = 'grid';
+       } else (sideBar.style.display = 'none');
+}
+window.onresize =()=>{
+    if (window.innerWidth > 500) sideBar.style.display = 'grid';
+    if (window.innerWidth < 500) sideBar.style.display = 'none';
+}
+
