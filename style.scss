@@ -212,11 +212,13 @@ body {
                 grid-auto-rows: 1fr;
                 gap: 1rem;
 
-                & .trendCard {
+                & .trendCard > a{
+                    color: black;
+                    font-size: 1rem;
                     // padding: .8rem;
                     display: flex;
                     align-items: center;
-                    gap: 8px;
+                    gap: 1rem;
                 }
             }
 
