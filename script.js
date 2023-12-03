@@ -66,3 +66,20 @@ publishCard.addEventListener('click', ()=> {
 deleteCard.addEventListener('click', ()=>{
     mainContentCard.remove();
 })
+
+//search cards with search bar
+const searchInput = document.querySelector('#searchPageInput');
+searchInput.addEventListener('keyup', function() {
+    const searchString = searchInput.value.toLowerCase().trim();
+    const mainContentCardHeaderSearchWithin = document.querySelectorAll('.mainContentCard');
+    for (i = 0; i < mainContentCardHeaderSearchWithin.length; i++) {
+        let content = mainContentCardHeaderSearchWithin[i];
+            if (content.textContent.toLowerCase().trim().indexOf(searchString) > -1) {
+                content.style.display = '';
+                break;
+            } else {
+                content.style.display = 'none';
+            }
+        }
+    }
+)

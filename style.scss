@@ -80,9 +80,7 @@ body {
     box-shadow: 0 3px 4px 1px #ccc;
     display: grid;
     grid-template-rows: 2fr 2fr;
-    & * {
-    //   border:2px solid blue;
-    }
+ 
     & .headerTop {
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -99,14 +97,15 @@ body {
             }
         }
         
-
-    }
     & .search {
         display: flex;
         align-items: center;
         gap:.9rem;
         padding: 1rem;
         padding-left: 3rem;
+
+        & .searchBtn {
+        }
     }
     & input[name='search'] {
         width: 60%;
@@ -117,6 +116,7 @@ body {
         border: none;
         outline: none;
     }
+}
     & .headerBottom {
         display:grid;
         grid-template-columns: 5fr 2fr;
