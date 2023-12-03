@@ -76,8 +76,7 @@ searchInput.addEventListener('keyup', function() {
         let content = mainContentCardHeaderSearchWithin[i];
             if (content.textContent.toLowerCase().trim().indexOf(searchString) > -1) {
                 content.style.display = '';
-                break;
-            } else {
+            }else {
                 content.style.display = 'none';
             }
         }
