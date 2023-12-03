@@ -1,17 +1,20 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('./fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body {
     margin: 0;
-    // background-color: #eee;
-    // height: 100svh;
-    // overflow:hidden;
 }
 .main {
-    // overflow: auto;
+    font-family: robotoregular, sans-serif, Arial, Helvetica, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
-    // width: 100%;
     position: relative;
     box-sizing: border-box;
     font-size: 1.1rem;
-    // height: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 150px 1fr 3fr;
@@ -104,8 +107,6 @@ body {
         padding: 1rem;
         padding-left: 3rem;
 
-        & .searchBtn {
-        }
     }
     & input[name='search'] {
         width: 60%;
@@ -126,12 +127,12 @@ body {
             align-items: center;
             padding-left: 3rem;
             gap: 1rem;
-            // padding: 1rem;
             padding-left: 3rem;
 
             & .userIcon {
-                // background-color:coral;
-                border-radius: 20%;
+                border: 1px solid black;
+                border-radius: 50%;
+                box-shadow: 2px 2px 2px 2px #ccc;
             }
             & h2 {
                 margin: 0;
@@ -255,11 +256,6 @@ body {
     }
 
     
-
-    & * {
-        // border:1px solid pink;
-    }
-
     & .right {
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -297,7 +293,6 @@ body {
                 & .trendCard > a{
                     color: black;
                     font-size: 1rem;
-                    // padding: .8rem;
                     display: flex;
                     align-items: center;
                     gap: 1rem;
@@ -335,6 +330,12 @@ a {
     color:white;
 }
 
+.showHideSideBarOnMobile {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px #bbb;
+}
 @media (min-width:500px) {
     .showHideSideBarOnMobile {
         display: none;
@@ -364,59 +365,4 @@ a {
         display: inline;
     }
 }
-// @media (max-width: 500px) {
 
-//    .sideBar {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     padding: 0;
-//     & .bottomSideBar {
-//         display: none;
-//     }
-//     & .middleSideBar {
-//         display: none;
-//     }
-    
-// }
-
-// }
-//         grid-area: sideBar;
-//         order: 1;
-//         max-height: 15%;
-//         width: 100%;
-//         padding: 20px;
-//         display: grid;
-//         grid-template-columns: 1fr;
-//         grid-template-rows: 1fr 1fr;
-//         grid-template-areas: "left"
-//                              "right";
-        
-//         justify-items: center;
-//         align-items: center;
-
-//         & .logoSideBar {
-//             grid-area: logo;
-//             display: none;
-//         }
-//         & .middleSideBar {
-//             gap:0;
-//             margin: 0;
-//             padding: 0;
-//             grid-area: left;
-//             display: flex;
-//             flex-wrap: wrap;
-//         }
-//         & .bottomSideBar {
-//             grid-area: right;
-//             display: flex;
-//             flex-wrap: wrap;
-//         }
-
-// }
-//     .header {
-//         grid-area: header;
-//     }
-//     .mainContent {
-//         grid-area: mainContent;
-//     }
