@@ -28,11 +28,13 @@ publishCard.addEventListener('click', ()=> {
     const mainContentCardDivHeader = document.createElement('h3');
     mainContentCardDivHeader.className = 'mainContentCardHeader';
     mainContentCardDivHeader.textContent = userProjectTitle.value;
+    userProjectTitle.value = '';
     mainContentCardDiv.appendChild(mainContentCardDivHeader);
 
     const mainContentCardDivPara = document.createElement('p');
     mainContentCardDivPara.classList = 'mainContentCardPara';
     mainContentCardDivPara.textContent = userProjectText.value;
+    userProjectText.value = '';
     mainContentCardDiv.appendChild(mainContentCardDivPara)
 
     const mainContentCardDivBtnsDiv = document.createElement('div');
