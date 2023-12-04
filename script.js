@@ -17,8 +17,8 @@ const mainContentCards = document.querySelector('.mainContentCards');
 const publishCard = document.querySelector('.publishIdea');
 const userProjectTitle = document.querySelector('.projectTitleInput');
 const userProjectText = document.querySelector('.UserProjectText');
-const deleteCard = document.querySelector('.deleteCard');
-const mainContentCard = document.querySelector('.mainContentCard');
+const deleteCard = document.querySelectorAll('.deleteCard');
+const mainContentCard = document.querySelectorAll('.mainContentCard');
 
 //add a new card function. //
 publishCard.addEventListener('click', ()=> {
@@ -63,9 +63,11 @@ publishCard.addEventListener('click', ()=> {
 })
 
 //delete card already in the dom.
-deleteCard.addEventListener('click', ()=>{
-    mainContentCard.remove();
-})
+for (i = 0; i < deleteCard.length ; i++) {
+    const mainContentCardForDel = mainContentCard[i];
+     deleteCard[i].addEventListener('click', ()=>{
+        mainContentCardForDel.remove();      
+})}
 
 //search cards with search bar
 const searchInput = document.querySelector('#searchPageInput');
@@ -75,7 +77,7 @@ searchInput.addEventListener('keyup', function() {
     for (i = 0; i < mainContentCardHeaderSearchWithin.length; i++) {
         let content = mainContentCardHeaderSearchWithin[i];
             if (content.textContent.toLowerCase().trim().indexOf(searchString) > -1) {
-                content.style.display = '';
+                content.style.display = 'block';
             }else {
                 content.style.display = 'none';
             }
